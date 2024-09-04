@@ -25,7 +25,6 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-c
 
 // api
 app.use("/api/v1/user", userRoute);
