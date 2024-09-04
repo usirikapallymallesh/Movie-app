@@ -12,12 +12,13 @@ dataBaseConnection();
 // step 2: setup middleware
 const app = express();
 const corsOptions = {
-  origin:["http://localhost:5173",'https://movie-1277qpt87-malleshs-projects-5e2a1c5a.vercel.app/','https://movie-app-neon-nine.vercel.app/'],
+  // origin:["http://localhost:5173",'https://movie-1277qpt87-malleshs-projects-5e2a1c5a.vercel.app/','https://movie-app-neon-nine.vercel.app/'],
+  origin:"https://movie-app-neon-nine.vercel.app/", // replace with your origin url
   credentials: true, // enable set cookies over http and https
   optionsSuccessStatus: 200, // some browsers choke on 
 };
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
